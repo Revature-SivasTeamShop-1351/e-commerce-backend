@@ -28,10 +28,10 @@ public class ProfileController {
 
 	   
 
-	    @GetMapping("/myprofile")
-	    public Optional<User> findUserByEmail(@RequestBody String email){
+	    @GetMapping("/{id}")
+	    public Optional<User> findUserById(@PathVariable int id){
 	    	session.getAttribute("user");
-	    	return profileService.findUserByEmail(email);	    	
+	    	return profileService.findUserById(id);	    	
 
 	    }
 

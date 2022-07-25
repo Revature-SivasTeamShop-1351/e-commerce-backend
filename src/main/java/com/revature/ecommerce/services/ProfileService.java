@@ -19,8 +19,8 @@ public class ProfileService {
     }
 
 
-    public Optional<User> findUserByEmail(String email) {
-		return userRepository.findUserByEmail(email);
+    public Optional<User> findUserById(int id) {
+		return userRepository.findById(id);
         
     }
    
