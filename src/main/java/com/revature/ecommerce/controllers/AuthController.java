@@ -19,6 +19,7 @@ import java.util.Optional;
 public class AuthController {
 
     private final AuthService authService;
+    private HttpSession session;
 
     public AuthController(AuthService authService) {
         this.authService = authService;
@@ -54,4 +55,5 @@ public class AuthController {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(authService.register(created));
     }
+    
 }
